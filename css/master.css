@@ -1,0 +1,195 @@
+/* Grid unit, main color */
+
+@media screen {
+    :root {
+        --main-color: #FF5765;
+        /* Define the value of 1rem */
+        font-size: 21px;
+    }
+    body {
+        font-size: 13px;
+    }
+}
+
+@media print {
+    :root {
+        --main-color: #FF3333; /* or #FF3366 */
+        /* Define the value of 1rem */
+        font-size: calc(21/13*7pt);
+    }
+    body {
+        font-size: 7pt;
+    }
+}
+
+
+/* CSS reset */
+
+body, main, section, p, h1, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Layout for mobile */
+
+.container {
+    margin: 2rem 1rem 1rem 1rem;
+    position: relative;
+}
+
+main {
+    max-width: 19rem;
+    margin: -2rem 0 0 auto;
+}
+
+#logo {
+    margin: 5rem 0 0 0;
+}
+
+section {
+    margin: 4rem 0 1rem 0;
+}
+
+section h1 {
+    position: absolute;
+    left: 0;
+    margin: -2rem 0 0 0;
+}
+
+
+/* Layout for desktop and print */
+
+@media print, screen and (min-width: 768px) {
+    .container {
+        width: 34rem;
+        margin: 9rem auto 2rem auto;
+        position: relative;
+    }
+
+    main {
+        width: 19rem;
+        margin: 0 0 0 auto;
+    }
+
+    #logo {
+        position: absolute;
+        left: 0;
+        top: -0.155em;
+        margin: 0;
+    }
+
+    section {
+        position: relative;
+        margin: 4rem 0 4rem 0;
+    }
+
+    section h1 {
+        position: absolute;
+        width: 6rem;
+        left: -10rem;
+        text-align: right;
+        margin: 0;
+    }
+
+}
+
+
+/* Grid */
+
+/* body {
+    --grid-cell-width: calc(1rem - 1px);
+    background-image: repeating-linear-gradient(0deg, transparent, transparent var(--grid-cell-width), #eee var(--grid-cell-width), #eee 1rem), repeating-linear-gradient(-90deg, transparent, transparent var(--grid-cell-width), #eee var(--grid-cell-width), #eee 1rem);
+    background-size: 1rem 1rem;
+} */
+
+
+/* Typography */
+
+body {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 300;
+    line-height: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#logo, h1 {
+    font-family: "Montserrat", Verdana, sans-serif;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+#logo {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
+}
+
+h1 {
+    font-size: calc(2rem/3);
+    line-height: 1rem;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    margin: 1rem 0 1rem 0;
+}
+
+a {
+    color: var(--main-color);
+}
+
+
+/* Unordered list style */
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  text-indent: -1rem;
+  padding-left: 1rem;
+}
+
+li:before {
+    content: '\25A0';
+    color: var(--main-color);
+    display: inline-block;
+    width: 1rem;
+    font-size: 1rem;
+    vertical-align: -0.07em;
+    /* Prevent the bullet to increase the line height */
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+    /* Left-align the bullet with the left border of the text area */
+    text-indent: -0.11em;
+}
+
+
+/* Contact-us box on desktop and print */
+@media print, screen and (min-width: 768px) {
+
+    #contact-us p {
+        color: white;
+        background-color: var(--main-color);
+        border-radius: 0.5rem;
+        margin-left: -9rem;
+        padding-left: 9rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #contact-us h1 {
+        color: white;
+        padding-top: 1rem;
+    }
+
+    #contact-us a {
+        color: white;
+        text-decoration: none;
+    }
+}
