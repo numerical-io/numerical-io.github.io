@@ -156,22 +156,18 @@ li {
 }
 
 li:before {
-    content: '\25A0';
-    color: var(--main-color);
+    content: "";
+    background-image: url(square.svg);
+    background-size: 1ex 1ex;
+    height: 1ex;
+    width: 1ex;
+    margin-right: calc(1rem - 1ex);
     display: inline-block;
-    width: 1rem;
-    font-size: 1rem;
-    vertical-align: -0.07em;
-    /* Prevent the bullet to increase the line height */
-    margin-top: -0.5rem;
-    margin-bottom: -0.5rem;
-    /* Left-align the bullet with the left border of the text area */
-    text-indent: -0.11em;
 }
 
 
 /* Contact-us box on desktop and print */
-@media print, screen and (min-width: 768px) {
+@media print, screen and (min-width: 600px) {
 
     #contact-us p {
         border: 1px solid var(--main-color);
