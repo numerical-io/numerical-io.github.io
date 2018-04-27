@@ -60,7 +60,7 @@ section h1 {
 
 /* Layout for desktop and print */
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (min-width: 600px) {
     .container {
         width: 34rem;
         margin: 9rem auto 2rem auto;
