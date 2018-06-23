@@ -2,7 +2,7 @@
 
 @media screen {
     :root {
-        --main-color: #FF5765;
+        --main-color: #FF4133;
         /* Define the value of 1rem */
         font-size: 21px;
     }
@@ -40,11 +40,16 @@ body, main, section, p, h1, ul, li {
 
 main {
     max-width: 19rem;
-    margin: -2rem 0 0 auto;
+    margin: 4rem 0 0 auto;
 }
 
 #logo {
-    margin: 5rem 0 0 0;
+    margin: 6rem auto 8rem auto;
+    width: 151px;
+    height: 132px;
+    display: block;
+    background-size: contain;
+    background-image: url('../images/logo.svg');
 }
 
 section {
@@ -63,7 +68,7 @@ section h1 {
 @media print, screen and (min-width: 600px) {
     .container {
         width: 34rem;
-        margin: 9rem auto 2rem auto;
+        margin: 6rem auto 2rem auto;
         position: relative;
     }
 
@@ -73,10 +78,9 @@ section h1 {
     }
 
     #logo {
-        position: absolute;
-        left: 0;
-        top: -0.155em;
-        margin: 0;
+        margin: 6rem 23rem 6rem auto;
+        width: 130px;
+        height: 114px;
     }
 
     section {
