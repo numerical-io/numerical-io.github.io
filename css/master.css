@@ -146,6 +146,9 @@ a {
     color: var(--main-color);
 }
 
+#contact-us a {
+    text-decoration: none;
+}
 
 /* Unordered list style */
 
@@ -167,26 +170,4 @@ li:before {
     width: 1ex;
     margin-right: calc(1rem - 1ex);
     display: inline-block;
-}
-
-
-/* Contact-us box on desktop and print */
-@media print, screen and (min-width: 600px) {
-
-    #contact-us p {
-        border: 1px solid var(--main-color);
-        border-radius: 0.5rem;
-        margin-left: -9rem;
-        padding-left: 9rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    #contact-us h1 {
-        padding-top: 1rem;
-    }
-
-    #contact-us a {
-        text-decoration: none;
-    }
 }
